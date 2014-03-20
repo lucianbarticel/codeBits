@@ -27,16 +27,18 @@ function get_web_page($url) {
 
     $options = array(
         CURLOPT_CUSTOMREQUEST => "GET", 
-        CURLOPT_POST => false, 
+        CURLOPT_POST => false,
         CURLOPT_USERAGENT => $user_agent, 
+        CURLOPT_COOKIEFILE => "cookie.txt", 
+        CURLOPT_COOKIEJAR => "cookie.txt", 
         CURLOPT_RETURNTRANSFER => true, 
         CURLOPT_HEADER => false, 
-        CURLOPT_FOLLOWLOCATION => true, 
-        CURLOPT_ENCODING => "", 
-        CURLOPT_AUTOREFERER => true, 
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_AUTOREFERER => true,
         CURLOPT_CONNECTTIMEOUT => 120,
-        CURLOPT_TIMEOUT => 120, 
-        CURLOPT_MAXREDIRS => 10, 
+        CURLOPT_TIMEOUT => 120,
+        CURLOPT_MAXREDIRS => 10,
     );
 
     $ch = curl_init($url);
