@@ -47,7 +47,7 @@ class Board {
     function compute_result($home_team, $away_team, $result, $home_win_odd, $away_win_odd) {
         switch ($result) {
             case "H":
-                $this->teams_profit_array[$home_team] += 10 * $home_win_odd;
+                $this->teams_profit_array[$home_team] += (10 * $away_win_odd)-10;
                 $this->teams_profit_array[$away_team] -= 10;
                 break;
             case "D":
@@ -56,7 +56,7 @@ class Board {
                 break;
             case "A":
                 $this->teams_profit_array[$home_team] -= 10;
-                $this->teams_profit_array[$away_team] += 10 * $away_win_odd;
+                $this->teams_profit_array[$away_team] += (10 * $away_win_odd)-10;
                 break;
         }
     }
