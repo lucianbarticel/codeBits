@@ -1,0 +1,10 @@
+doctype html
+html(lang="en")
+head
+title #{title}
+body
+p.greeting Hello, #{name}!
+form(action='/',method='post', value='')
+    label(for='someName') Write your name here:
+    input(name='someName', type='text', placeholder='write a name here')
+    
