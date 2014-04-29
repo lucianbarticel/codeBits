@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+head
+title #{title}
+body
+p.content #{content}
+form(method='post', value='')
+    label(for='userName') Usename:
+    br
+    input(name='userName', type='text', placeholder='your username here')
+    br
+    label(for='passWord') Password:
+    br
+    input(name='passWord', type='password')
+    br
+    input(name='submitThis' type='submit')

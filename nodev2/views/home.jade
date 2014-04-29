@@ -4,7 +4,15 @@ head
 title #{title}
 body
 p.greeting Hello, #{name}!
+a(href="/logout") Logout
+p.content #{content}
 form(action='/',method='post', value='')
     label(for='someName') Write your name here:
+    br
     input(name='someName', type='text', placeholder='write a name here')
-    
+    br
+    label(for='someContent') Write some content here:
+    br
+    textarea(name='someContent')
+    br
+    input(name='submitThis' type='submit')
