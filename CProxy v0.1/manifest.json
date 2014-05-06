@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "ComodoProxy",
+    "description": "Comodo Proxy extension",
+    "version": "1.0.0",
+    "background": {"scripts": ["JS/background.js"]},
+    "permissions": [
+        "proxy",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "downloads",
+        "contextMenus",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "chrome://favicon/"
+    ],
+    "browser_action": {
+    },
+    "content_scripts": []
+}
